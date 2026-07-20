@@ -84,4 +84,4 @@ FROM camofox-browser AS with-plugins
 COPY plugins/ ./plugins/
 COPY camofox.config.json ./
 COPY scripts/install-plugin-deps.sh /tmp/install-plugin-deps.sh
-RUN /tmp/install-plugin-deps.sh && rm /tmp/install-plugin-deps.sh
+RUN chmod +x /tmp/install-plugin-deps.sh && /tmp/install-plugin-deps.sh && rm /tmp/install-plugin-deps.sh
